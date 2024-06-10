@@ -1,0 +1,17 @@
+<span class=" back bg-lime-300  px-8 py-1.5 hover:px-12 text-black">
+    <slot/>
+</span>
+
+<style>
+    .back{
+        clip-path: polygon(5% 10%, 46% 1%, 46% 10%, 100% 0, 95% 90%, 31% 100%, 31% 90%, 0 100%);
+    }
+    .back:hover{
+        transition: 200ms;
+        clip-path: polygon(5% 10%, 66% 1%, 66% 10%, 100% 0, 95% 90%, 51% 100%, 51% 90%, 0 100%);
+
+    }
+
+
+
+</style>

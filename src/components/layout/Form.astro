@@ -1,0 +1,41 @@
+
+
+      <div class=" p-3 border border-white rounded-lg">
+
+          <form class=" flex  flex-col gap-5 backdrop-blur-lg"  action="">
+              <span class=" flex flex-col gap-2">
+                  <labe class=" text-white text-2xl font-semibold  " for="">Nome</labe>
+                  <input class=" border-2 border-white p-2 rounded-lg bg-transparent active:border-lime-300  focus:outline-none focus:border-lime-300 focus:ring-lime-300 focus:ring-1 placeholder:text-white  text-white" type="text" placeholder="Nome"/>
+                </span>
+                <span class=" flex flex-col gap-2">
+                    <labe class=" text-white text-2xl font-semibold  " for="">Whatsapp</labe>
+                    <input  x-mask="99-99999-9999" id="phone"  class=" border-2 border-white p-2 rounded-lg bg-transparent active:border-lime-300  focus:outline-none focus:border-lime-300 focus:ring-lime-300 focus:ring-1 placeholder:text-white  text-white" type="text" placeholder="(99) 99999-9999"/>
+                  </span>
+                
+                  <span class=" flex flex-col gap-2">
+                    <labe class=" text-white text-2xl font-semibold  " for="">Email</labe>
+                    <input class=" border-2 border-white p-2 rounded-lg bg-transparent active:border-lime-300  focus:outline-none focus:border-lime-300 focus:ring-lime-300 focus:ring-1 placeholder:text-white  text-white" type="email" placeholder="Joãosnt@gmail.com"/>
+                  </span>
+                
+                  <span class=" flex flex-col gap-2">
+                    <labe class=" text-white text-2xl font-semibold  " for="">Mensagem</labe>
+                    <textarea class=" border-2 border-white p-2 rounded-lg bg-transparent active:border-lime-300  focus:outline-none focus:border-lime-300 focus:ring-lime-300 focus:ring-1 placeholder:text-white  text-white" placeholder="Mensagem"/>
+                  </span>
+
+                   <button type="submit" class=" bg-white text-black font-semibold text-3xl p-1 rounded-lg">
+                    Enviar 
+                   </button>
+                  
+                
+            </form>
+        </div>
+ 
+        <script>
+            import Inputmask from 'inputmask'
+          
+            document.addEventListener('DOMContentLoaded', function () {
+                const inputElement = document.getElementById('phone');
+                Inputmask({ mask: '(99) 99999-9999' }).mask(inputElement);
+              });
+          
+          </script>

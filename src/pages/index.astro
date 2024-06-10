@@ -1,0 +1,150 @@
+---
+import TextGradient from '../components/effects/TextGradient.astro';
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/ui/Button.astro';
+import Marquee from "../components/layout/Marquee.astro"
+import Image from 'astro/components/Image.astro';
+import Foto from "../Images/Foto.jpg"
+import FrontEnd from '../components/Swipper/FrontEnd.jsx';
+import BackEnd from "../components/Swipper/BackEnd.jsx";
+import TextBg from "../components/effects/TextBg.astro"
+import Card from '../components/ui/Card.astro';
+import Projetos from "../components/ui/Projetos.astro"
+import Depoimento from '../components/Swipper/Depoimento.jsx';
+import Form from "../components/layout/Form.astro"
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+---
+
+<Layout title="Welcome to Astro.">
+	
+	<section class=" flex flex-col gap-5 w-full px-5  lg:px-20 pt-10 pb-14  place-items-center">
+		
+		<TextBg>
+			<h3 class=" text-3xl font-semibold capitalize"> software developer</h3>
+		 </TextBg> 
+		<h2 class=" text-7xl text-center capitalize text-white font-bold font-prime" >o desenvolvedor full stack<br class=" hidden  lg:flex"/>  que
+			esta falta sua equipe
+		</h2>
+		<p class=" text-white text-center  font-semibold text-[25px]  lg:px-20">
+			Está procurando um desenvolvedor full stack para impulsionar sua equipe ou transformar suas ideias em produtos lucrativos e escaláveis? Com vasta experiência no desenvolvimento de soluções robustas, estou preparado para colaborar e garantir o sucesso do seu projeto.
+		</p>
+		<Button Styled=" text-2xl " Texto="Agendar Reunião">
+			<svg xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 256 256">
+				<path fill="" d="M208 28h-20v-4a12 12 0 0 0-24 0v4H92v-4a12 12 0 0 0-24 0v4H48a20 20 0 0 0-20 20v160a20 20 0 0 0 20 20h160a20 20 0 0 0 20-20V48a20 20 0 0 0-20-20M68 52a12 12 0 0 0 24 0h72a12 12 0 0 0 24 0h16v24H52V52ZM52 204V100h152v104Zm92-76a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-96 48a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16"/>
+			</svg>
+		</Button>
+		
+		
+	</section>
+	<section class=" w-full bg-lime-300 ">
+		<Marquee/>
+	</section>
+
+	<section  class=" w-full flex flex-row px-20 py-10 gap-5">
+		<div class=" w-2/6">
+		 <Image class=" border border-white rounded-lg" src={Foto} alt={''}/>
+		</div>
+		<div class=" w-4/6 flex place-items-center">
+		
+				<span class=" text-xl backdrop-blur-lg  flex flex-col gap-6 text-white font-semibold border border-white p-5 rounded-lg">
+					<h3 class=" text-5xl font-semibold text-center">Sobri min</h3>
+				
+<p>
+Olá, sou Roger, desenvolvedor full stack freelancer!
+<br/>
+<br/>
+Meu foco é criar soluções criativas e inovadoras que unem criatividade e proficiência técnica. Tenho um compromisso constante em entregar software robusto e eficiente, colaborando de perto com outros desenvolvedores e adotando as melhores práticas de desenvolvimento, como clean code, clean architecture e design patterns. Tudo isso para garantir produtos de alta qualidade, seja um site, sistema ou aplicativo.
+<br/>
+<br/>
+Minhas tecnologias favoritas são aquelas que incorporam as melhores práticas de desenvolvimento, permitindo-me focar na criação de projetos incríveis. Além disso, gerencio todas as etapas do processo de desenvolvimento, desde a arquitetura do software até a implantação e monitoramento nas melhores plataformas de hospedagem.	
+</p>	
+
+<span class=" flex flex-row gap-5 w-full  justify-center">
+	<FaInstagram client:load className=' text-4xl  text-white hover:text-lime-300'/>
+	<FaLinkedin client:load className=' text-4xl  text-white hover:text-lime-300'/>
+	<FaWhatsapp client:load className=' text-4xl  text-white hover:text-lime-300'/>
+	<FaGithub client:load className=' text-4xl  text-white hover:text-lime-300'/>
+
+
+
+</span>
+</span>
+
+		</div>
+	</section>
+	<section class=" w-full px-5 py-10 flex flex-col gap-12 capitalize">
+		<h2 class=" text-center text-5xl text-white font-bold flex flex-col gap-3 place-items-center">minha principais 
+			<br class=" hidden lg:flex"/><TextBg>soft skills</TextBg>  </h2>
+		<div class=" flex flex-col gap-5">
+
+			<span class=" w-full">
+				<FrontEnd client:load/>
+			</span>
+			<span class=" w-full">
+				<BackEnd client:load/>
+			</span>
+		</div>
+	</section>
+
+
+	<section class=" flex flex-col gap-12 px-20 py-10">
+		<h2 class=" text-3xl lg:text-5xl text-center text-white font-semibold capitalize flex flex-col gap-3 place-items-center">Vejs como posso ajudar   <br class=" hidden lg:flex"/><TextBg>sua empressa </TextBg></h2>
+		<div class=" grid grid-cols-2 gap-5">
+			<Card Class=" lg:h-48 w-1/2" Numero={1} Titulo=" Desevolvimento WebApp">
+				Construção de aplicativos web interativos e escaláveis usando tecnologias modernas como React.js, Angular, Vue.js, etc.
+			</Card>
+			<Card Class=" lg:h-48 w-1/2" Numero={1} Titulo=" Desevolvimento WebApp">
+				Construção de aplicativos web interativos e escaláveis usando tecnologias modernas como React.js, Angular, Vue.js, etc.
+			</Card>
+			<Card Class=" lg:h-48 w-1/2" Numero={1} Titulo=" Desevolvimento WebApp">
+				Construção de aplicativos web interativos e escaláveis usando tecnologias modernas como React.js, Angular, Vue.js, etc.
+			</Card>
+			<Card Class=" lg:h-48 w-1/2" Numero={1} Titulo=" Desevolvimento WebApp">
+				Construção de aplicativos web interativos e escaláveis usando tecnologias modernas como React.js, Angular, Vue.js, etc.
+			</Card>
+		</span>
+		</div>
+
+
+	</section>
+
+	<section class=" w-full bg-gradient-to-r from-lime-300 to-teal-400">
+		<Marquee/>
+	</section>
+	<section class=" w-full px-20 py-10 flex flex-col gap-8 place-items-center ">
+		<h2 class=" text-3xl lg:text-5xl text-center text-white font-semibold capitalize flex flex-col gap-3 place-items-center">Uma coleção dos meus   <br class=" hidden lg:flex"/><TextBg>melhores projetos </TextBg></h2>
+		<span   class=" w-full lg:px-10 flex flex-col gap-6 ">
+			<Projetos/>
+			<Projetos/>
+			<Projetos/>	 
+		</span>
+		<Button>
+			<p class=" text-2xl text-white font-semibold">
+				Ver mais
+			</p>
+		</Button>
+
+	</section>
+	<section class="w-full px-5 py-10 flex flex-col gap-6 ">
+		<h2 class=" text-3xl lg:text-5xl text-center text-white font-semibold capitalize flex flex-col gap-3 place-items-center">Uma coleção dos meus   <br class=" hidden lg:flex"/><TextBg>melhores projetos </TextBg></h2>
+        <span>
+			<Depoimento client:load/>
+		</span>
+
+	</section>
+	<section class=" py-10 px-4 lg:px-20 w-full flex flex-col gap-5 place-items-center">
+		<h2 class=" text-center text-5xl font-semibold text-white capitalize flex flex-col gap-3 place-items-center ">
+			Vamos nos conhecer <br class=" hidden lg:flex"/><TextBg>deixe uma mensagem</TextBg> 
+		</h2>
+		
+		<span class=" w-full lg:w-2/4">
+			<Form/>
+
+		</span>
+
+	</section>
+   
+	
+	
+</Layout>
+
